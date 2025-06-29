@@ -1,0 +1,235 @@
+{
+  "id": "828fd21b-ddb0-4e9f-9a6d-c8be1540aed6",
+  "version": "2.0",
+  "name": "pengaduan",
+  "url": "https://obscure-waffle-jw65p74jxqvh54px-5000.app.github.dev",
+  "tests": [{
+    "id": "38684a48-1b2c-4ff8-a06b-a1d92039f8f8",
+    "name": "pengaduan",
+    "commands": [{
+      "id": "f30c1209-2e32-4247-a8e7-1ddf565fab78",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b9cedf0b-c89c-4fd2-8b6d-a484da55ec2a",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "550x689",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ab3edcce-c00a-4847-8da9-1600db653bed",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Add Complaint",
+      "targets": [
+        ["linkText=Add Complaint", "linkText"],
+        ["css=.button-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Add Complaint')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/add')]", "xpath:href"],
+        ["xpath=//a", "xpath:position"],
+        ["xpath=//a[contains(.,'Add Complaint')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "de2d1530-046b-4833-95b1-692ea615420e",
+      "comment": "",
+      "command": "click",
+      "target": "name=title",
+      "targets": [
+        ["name=title", "name"],
+        ["css=input", "css:finder"],
+        ["xpath=//input[@name='title']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7885c6ad-810a-4ebc-a29f-84dd5b57fa43",
+      "comment": "",
+      "command": "type",
+      "target": "name=title",
+      "targets": [
+        ["name=title", "name"],
+        ["css=input", "css:finder"],
+        ["xpath=//input[@name='title']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "jalan rusak"
+    }, {
+      "id": "00bf1d6a-6fd4-4967-b74c-5b26b4258b8c",
+      "comment": "",
+      "command": "click",
+      "target": "name=description",
+      "targets": [
+        ["name=description", "name"],
+        ["css=textarea", "css:finder"],
+        ["xpath=//textarea[@name='description']", "xpath:attributes"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0eaf705f-c131-4e94-8351-ec82b7d3c5d0",
+      "comment": "",
+      "command": "type",
+      "target": "name=description",
+      "targets": [
+        ["name=description", "name"],
+        ["css=textarea", "css:finder"],
+        ["xpath=//textarea[@name='description']", "xpath:attributes"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": "jalan rusak parah"
+    }, {
+      "id": "52d4ce2a-1575-4f1a-b17d-3011c276c95c",
+      "comment": "",
+      "command": "click",
+      "target": "name=status",
+      "targets": [
+        ["name=status", "name"],
+        ["css=select", "css:finder"],
+        ["xpath=//select[@name='status']", "xpath:attributes"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "41163954-5262-4b87-9ea2-8e4e4f2b060d",
+      "comment": "",
+      "command": "select",
+      "target": "name=status",
+      "targets": [],
+      "value": "label=In Progress"
+    }, {
+      "id": "2050eb58-c885-430e-b9e6-8864c851b373",
+      "comment": "",
+      "command": "click",
+      "target": "css=option:nth-child(2)",
+      "targets": [
+        ["css=option:nth-child(2)", "css:finder"],
+        ["xpath=//option[@value='In Progress']", "xpath:attributes"],
+        ["xpath=//option[2]", "xpath:position"],
+        ["xpath=//option[contains(.,'In Progress')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "49cbcab1-3c7d-40e5-b9cf-5e0b28f338de",
+      "comment": "",
+      "command": "click",
+      "target": "css=button",
+      "targets": [
+        ["css=button", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Submit')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "54b0606d-ebb3-48ef-9079-fc10215c6f92",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=✏️ Edit",
+      "targets": [
+        ["linkText=✏️ Edit", "linkText"],
+        ["css=td > .button-link:nth-child(1)", "css:finder"],
+        ["xpath=//a[contains(text(),'✏️ Edit')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/update/1')]", "xpath:href"],
+        ["xpath=//td[5]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'✏️ Edit')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "43a89df6-e8dd-4edc-86cd-631b6a939e1b",
+      "comment": "",
+      "command": "click",
+      "target": "name=description",
+      "targets": [
+        ["name=description", "name"],
+        ["css=textarea", "css:finder"],
+        ["xpath=//textarea[@name='description']", "xpath:attributes"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9f4ec9ca-8de0-4e1d-9c43-cb24b3991537",
+      "comment": "",
+      "command": "type",
+      "target": "name=description",
+      "targets": [
+        ["name=description", "name"],
+        ["css=textarea", "css:finder"],
+        ["xpath=//textarea[@name='description']", "xpath:attributes"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": "jalan rusak parah banget"
+    }, {
+      "id": "969c3a2b-840b-464b-9918-d38735a01e7a",
+      "comment": "",
+      "command": "click",
+      "target": "name=status",
+      "targets": [
+        ["name=status", "name"],
+        ["css=select", "css:finder"],
+        ["xpath=//select[@name='status']", "xpath:attributes"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6226b40e-414c-4ce0-8bfb-685ec47c0f93",
+      "comment": "",
+      "command": "select",
+      "target": "name=status",
+      "targets": [],
+      "value": "label=Resolved"
+    }, {
+      "id": "80acd618-e072-4bc4-8d38-a2ae9292ecff",
+      "comment": "",
+      "command": "click",
+      "target": "css=option:nth-child(3)",
+      "targets": [
+        ["css=option:nth-child(3)", "css:finder"],
+        ["xpath=//option[@value='Resolved']", "xpath:attributes"],
+        ["xpath=//option[3]", "xpath:position"],
+        ["xpath=//option[contains(.,'Resolved')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "9df77066-a145-432e-b649-c905e425ee9b",
+      "comment": "",
+      "command": "click",
+      "target": "css=button",
+      "targets": [
+        ["css=button", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Update')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b6258e8b-3884-4e8e-a44d-35b28b4c4f6e",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=🗑️ Delete",
+      "targets": [
+        ["linkText=🗑️ Delete", "linkText"],
+        ["css=.button-link:nth-child(2)", "css:finder"],
+        ["xpath=//a[contains(text(),'🗑️ Delete')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/delete/1')]", "xpath:href"],
+        ["xpath=//a[2]", "xpath:position"],
+        ["xpath=//a[contains(.,'🗑️ Delete')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "c60d0a0f-b4c6-48f6-a849-ba3792361ee5",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["38684a48-1b2c-4ff8-a06b-a1d92039f8f8"]
+  }],
+  "urls": ["https://obscure-waffle-jw65p74jxqvh54px-5000.app.github.dev/"],
+  "plugins": []
+}
