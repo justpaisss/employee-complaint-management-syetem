@@ -1,0 +1,5 @@
+digraph "classes" {
+rankdir=BT
+charset="utf-8"
+"app.Complaint" [color="black", fontcolor="black", label=<{Complaint|created_at<br ALIGN="LEFT"/>description<br ALIGN="LEFT"/>id<br ALIGN="LEFT"/>status<br ALIGN="LEFT"/>title<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+}
