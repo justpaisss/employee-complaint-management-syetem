@@ -1,43 +1,34 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Complaint List</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='templates/style.css') }}">
-</head>
-<body>
-    <h1>Sistem Pengaduan Masyarakat Berbasis Lokasi</h1>
+{% extends 'base.html' %}
 
-    <!-- Top Add Button styled as per .top-buttons -->
-    <div class="top-buttons">
-        <a href="/add" class="button-link"> Add Complaint</a>
-    </div>
+{% block title %}Daftar Pengaduan{% endblock %}
 
-    <div class="container">
-        <table>
-            <thead>
-                <tr>
-                    <th>ID</th>
-                    <th>Title</th>
-                    <th>Description</th>
-                    <th>Status</th>
-                    <th>Actions</th>
-                </tr>
-            </thead>
-            <tbody>
-                {% for complaint in complaints %}
-                <tr>
-                    <td>{{ complaint.id }}</td>
-                    <td>{{ complaint.title }}</td>
-                    <td>{{ complaint.description }}</td>
-                    <td>{{ complaint.status }}</td>
-                    <td>
-                        <a href="/update/{{ complaint.id }}" class="button-link" style="background-color:#ffc107;">✏️ Edit</a>
-                        <a href="/delete/{{ complaint.id }}" class="button-link" style="background-color:#dc3545;">🗑️ Delete</a>
-                    </td>
-                </tr>
-                {% endfor %}
-            </tbody>
-        </table>
-    </div>
-</body>
-</html>
+{% block content %}
+  <h1 class="mb-4">Daftar Pengaduan</h1>
+  <a href="{{ url_for('add_complaint') }}" class="btn btn-success mb-3">+ Tambah Pengaduan</a>
+
+  <table class="table table-bordered table-striped">
+    <thead class="table-dark">
+      <tr>
+        <th>Judul</th>
+        <th>Deskripsi</th>
+        <th>Status</th>
+        <th>Tanggal</th>
+        <th>Aksi</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for complaint in complaints %}
+      <tr>
+        <td>{{ complaint.title }}</td>
+        <td>{{ complaint.description }}</td>
+        <td>{{ complaint.status }}</td>
+        <td>{{ complaint.created_at.strftime('%d-%m-%Y') }}</td>
+        <td>
+          <a href="{{ url_for('update_complaint', id=complaint.id) }}" class="btn btn-sm btn-warning">Edit</a>
+          <a href="{{ url_for('delete_complaint', id=complaint.id) }}" class="btn btn-sm btn-danger">Hapus</a>
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+{% endblock %}

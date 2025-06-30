@@ -1,27 +1,26 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Update Complaint</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-</head>
-<body>
-    <h1>Update Complaint</h1>
-    <form method="POST">
-        <label>Title:</label>
-        <input type="text" name="title" value="{{ complaint.title }}" required><br><br>
+{% extends 'base.html' %}
+{% block title %}Tambah Pengaduan{% endblock %}
+{% block content %}
 
-        <label>Description:</label>
-        <textarea name="description" required>{{ complaint.description }}</textarea><br><br>
+<h2 class="mb-3">Tambah Pengaduan</h2>
+<form method="POST">
+  <div class="mb-3">
+    <label for="title" class="form-label">Judul</label>
+    <input type="text" class="form-control" name="title" required>
+  </div>
+  <div class="mb-3">
+    <label for="description" class="form-label">Deskripsi</label>
+    <textarea class="form-control" name="description" rows="4" required></textarea>
+  </div>
+  <div class="mb-3">
+    <label for="status" class="form-label">Status</label>
+    <select class="form-select" name="status">
+      <option value="Pending">Pending</option>
+      <option value="Diproses">Diproses</option>
+      <option value="Selesai">Selesai</option>
+    </select>
+  </div>
+  <button type="submit" class="btn btn-primary">Simpan</button>
+</form>
 
-        <label>Status:</label>
-        <select name="status">
-            <option value="Pending" {% if complaint.status == 'Pending' %}selected{% endif %}>Pending</option>
-            <option value="In Progress" {% if complaint.status == 'In Progress' %}selected{% endif %}>In Progress</option>
-            <option value="Resolved" {% if complaint.status == 'Resolved' %}selected{% endif %}>Resolved</option>
-        </select><br><br>
-
-        <button type="submit">Update</button>
-    </form>
-    <a href="/">Back to Home</a>
-</body>
-</html>
+{% endblock %}
